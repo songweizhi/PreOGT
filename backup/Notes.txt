@@ -1,0 +1,43 @@
+
+# install TensorFlow on Mac (https://developer.apple.com/metal/tensorflow-plugin/)
+# Download and install Conda env from https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
+chmod +x ~/Miniforge3-MacOSX-arm64.sh
+sh ~/Miniforge3-MacOSX-arm64.sh
+source ~/miniforge3/bin/activate
+conda install -c apple tensorflow-deps
+python -m pip install tensorflow-macos
+python -m pip install tensorflow-metal
+
+
+# change python in terminal to python/3.10
+sudo ln -s -f /usr/local/bin/python3.10 /usr/local/bin/python
+which python
+which python3
+python --version
+python3 --version
+
+
+
+
+
+'''
+# check the current tensorflow version
+python -m pip list | grep tensorflow
+# force upgrade tensorflow-deps first
+conda install -c apple tensorflow-deps --force-reinstall
+# or point to specific conda environment if you have one
+conda install -c apple tensorflow-deps --force-reinstall -n my_env
+# uninstall existing tensorflow-macos and tensorflow-metal
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3 -m pip uninstall tensorflow-macos
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3 -m pip uninstall tensorflow-metal
+# install the latest
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3 -m pip install tensorflow-macos
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3 -m pip install tensorflow-metal
+# verify that you have the latest
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3 -m pip list | grep tensorflow
+
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+
+'''
