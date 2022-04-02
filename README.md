@@ -1,6 +1,6 @@
 
 
-PreTR_ML: predict bacterial growth temperature range by Machine Learning
+PreOGT: Predicting optimal growth temperature (OGT)
 ---
 
 + Contact: Weizhi Song (songwz03@gmail.com)
